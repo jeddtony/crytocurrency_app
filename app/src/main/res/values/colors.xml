@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#1F8022</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorPrimaryDark">#1F8022</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorDull">#FFB1AEAF</color>
+    <color name="dullWhite">#979494</color>
+    <!--<color name="myAppBar">#1F8022</color>-->
+
 </resources>

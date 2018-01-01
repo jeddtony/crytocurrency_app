@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.content.Loader;
 //import android.support.v4.content.Loader;
@@ -56,8 +58,9 @@ public class MainActivity extends AppCompatActivity
     ProgressBar mProgressBar;
     TextView mErrorMessage;
     CurrencyAdapter mCurrencyAdapter;
-
+    public  static String fontName = "font/Roboto-Regular.ttf";
     private static final String LIFECYCLE_CALLBACKS_ADAPTER_KEY = "adapter";
+    public static  Typeface typeface;
     CurrencyAdapter currencyAdapter;
 
     @Override
@@ -66,6 +69,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // TO SET THE FONT SIZE
+         typeface = Typeface.createFromAsset(getAssets(), fontName );
+
+//        toolbar.setBackgroundColor(getResources().getColor(R.color.myAppBar));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.myAppBar)));
 
         if(savedInstanceState != null){
             if(savedInstanceState.containsKey(LIFECYCLE_CALLBACKS_ADAPTER_KEY)){
@@ -81,6 +90,7 @@ public class MainActivity extends AppCompatActivity
         mProgressBar = (ProgressBar) findViewById(R.id.pb_loading_indicator);
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_card_list);
         mErrorMessage = (TextView) findViewById(R.id.error_loading);
+        mErrorMessage.setTypeface(typeface);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -214,9 +224,6 @@ public class MainActivity extends AppCompatActivity
             startActivity(startCardList);
         }
 
-        if(id == R.id.show_notification){
-//            NotificationUtils.remindUserBecauseCharging(this);
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -238,7 +245,7 @@ public class MainActivity extends AppCompatActivity
 //
 //        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+//        } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 

@@ -104,6 +104,11 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.Curren
            mClickHandler.onClick(thisCurrency);
                 }
             });
+
+            conversionCurrency.setTypeface(MainActivity.typeface);
+            curr_price.setTypeface(MainActivity.typeface);
+            curr_date.setTypeface(MainActivity.typeface);
+            curr_time.setTypeface(MainActivity.typeface);
         }
 
    }

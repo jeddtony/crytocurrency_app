@@ -33,7 +33,7 @@ public class ReminderUtilities {
      * Interval at which to remind the user to drink water. Use TimeUnit for convenience, rather
      * than writing out a bunch of multiplication ourselves and risk making a silly mistake.
      */
-    private static final int REMINDER_INTERVAL_MINUTES = 1;
+    private static final int REMINDER_INTERVAL_MINUTES = 15;
     private static final int REMINDER_INTERVAL_SECONDS = (int) (TimeUnit.MINUTES.toSeconds(REMINDER_INTERVAL_MINUTES));
     private static final int SYNC_FLEXTIME_SECONDS = REMINDER_INTERVAL_SECONDS;
 
@@ -105,7 +105,7 @@ public class ReminderUtilities {
                  */
                 .setTrigger(Trigger.executionWindow(
                         REMINDER_INTERVAL_SECONDS,
-                        REMINDER_INTERVAL_SECONDS ))
+                        REMINDER_INTERVAL_SECONDS + SYNC_FLEXTIME_SECONDS ))
                 /*
                  * If a Job with the tag with provided already exists, this new job will replace
                  * the old one.

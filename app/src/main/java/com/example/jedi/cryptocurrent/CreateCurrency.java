@@ -32,11 +32,13 @@ public class CreateCurrency extends AppCompatActivity {
     }
 
     public void saveCurrency(View view){
-        if(mInputCurrency.getText() == null){
+        if( mInputCurrency.getText().toString().equals("")){
             Toast.makeText(this, "Please enter currency", Toast.LENGTH_LONG).show();
+            return;
         }
-        else if(mDollarEquivalence.getText() == null){
+        else if(mDollarEquivalence.getText().toString().equals("")){
             Toast.makeText(this, "Please enter dollar equivalence", Toast.LENGTH_LONG).show();
+            return;
         }
 
         else {
