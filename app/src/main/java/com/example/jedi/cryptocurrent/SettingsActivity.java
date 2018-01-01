@@ -18,7 +18,9 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -168,8 +170,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     protected boolean isValidFragment(String fragmentName) {
         return PreferenceFragment.class.getName().equals(fragmentName)
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
-                || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
-                || NotificationPreferenceFragment.class.getName().equals(fragmentName)
+//                || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
+//                || NotificationPreferenceFragment.class.getName().equals(fragmentName)
                 // I ADDED THIS LINE FOR ETHEREUM
                 || EthereumPreferenceFragment.class.getName().equals(fragmentName);
     }
@@ -185,6 +187,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
+            Log.i("GPrefFragment", "This is the general pref fragment");
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
@@ -224,8 +227,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("notifications_new_message_ringtone"));
         }
-
-
     }
 
     /**
@@ -266,6 +267,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_ethereum);
             setHasOptionsMenu(true);
+            Log.i("EPrefFragment", "This is the ethereum pref fragment");
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
@@ -285,5 +287,4 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             return super.onOptionsItemSelected(item);
         }
     }
-
 }

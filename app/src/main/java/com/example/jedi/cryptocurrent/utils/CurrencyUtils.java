@@ -24,7 +24,7 @@ public class CurrencyUtils {
 
     public static Map getUsdBtc(){
         Map<String, String> localRate = new HashMap<>();
-        localRate.put("name", "USD_BTC");
+        localRate.put("name", "USD/BTC");
         localRate.put("value", USD_BTC);
         localRate.put("time", DateFormat.getTimeInstance().format(new Date()));
         localRate.put("date", DateFormat.getDateInstance().format(new Date()));
@@ -32,7 +32,7 @@ public class CurrencyUtils {
     }
     public static Map getUsdEth(){
         Map<String, String> localRate = new HashMap<>();
-        localRate.put("name", "USD_ETH");
+        localRate.put("name", "USD/ETH");
         localRate.put("value", USD_ETH);
         localRate.put("time", DateFormat.getTimeInstance().format(new Date()));
         localRate.put("date", DateFormat.getDateInstance().format(new Date()));
@@ -41,7 +41,7 @@ public class CurrencyUtils {
 
     public static Map getEurBtc(){
         Map<String, String> localRate = new HashMap<>();
-        localRate.put("name", "EUR_BTC");
+        localRate.put("name", "EUR/BTC");
         localRate.put("value", EUR_BTC);
         localRate.put("time", DateFormat.getTimeInstance().format(new Date()));
         localRate.put("date", DateFormat.getDateInstance().format(new Date()));
@@ -51,7 +51,7 @@ public class CurrencyUtils {
 
     public static Map getEurEth(){
         Map<String, String> localRate = new HashMap<>();
-        localRate.put("name", "EUR_ETH");
+        localRate.put("name", "EUR/ETH");
         localRate.put("value", EUR_ETH);
         localRate.put("time", DateFormat.getTimeInstance().format(new Date()));
         localRate.put("date", DateFormat.getDateInstance().format(new Date()));
@@ -101,7 +101,7 @@ public class CurrencyUtils {
         Log.i("usdEquivalence", "" + usdEquivalence);
         Log.i("currencyValue", "" + currencyValue);
         Map<String, String> map = new HashMap<>();
-        map.put("name", currencyName + "_Btc");
+        map.put("name", currencyName + "/Btc");
         map.put("value", "" + currencyValue);
         map.put("time", DateFormat.getTimeInstance().format(new Date()));
         map.put("date", DateFormat.getDateInstance().format(new Date()));
@@ -115,7 +115,7 @@ public class CurrencyUtils {
         Log.i("currencyValue", "" + currencyValue);
 
         Map<String, String> map = new HashMap<>();
-        map.put("name", currencyName + "_Eth");
+        map.put("name", currencyName + "/Eth");
         map.put("value", "" + currencyValue);
         map.put("time", DateFormat.getTimeInstance().format(new Date()));
         map.put("date", DateFormat.getDateInstance().format(new Date()));

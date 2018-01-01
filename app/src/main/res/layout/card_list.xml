@@ -48,20 +48,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/price_placeholder"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:layout_weight="2"/>
             <TextView
                 android:id="@+id/curr_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="454213"
-                android:textSize="45sp"/>
+                android:textSize="45sp"
+                android:layout_weight="2"/>
 <LinearLayout
     android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="2">
     <TextView
         android:id="@+id/curr_date"
         android:layout_width="wrap_content"
